@@ -1,6 +1,6 @@
 import datacreation
 from dataloader import dataloader
-from model import gen,dis
+from model import Generator,Discriminator
 
 Tensor = torch.cuda.FloatTensor if 'cuda' else torch.FloatTensor
 for epoch in range(100):
