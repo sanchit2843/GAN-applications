@@ -39,14 +39,14 @@ for epoch in range(1000):
         optimizer_G.step()
 
         optimizer_D.zero_grad()
-        real_loss = adversarial_loss(dis1(real_imgs), valid)
-        fake_loss = adversarial_loss(dis1(gen_imgs.detach()), fake)
+        real_loss = adversarial_loss(dis(real_imgs), valid)
+        fake_loss = adversarial_loss(dis(gen_imgs.detach()), fake)
         d_loss = (real_loss + fake_loss) / 2
 
         d_loss.backward()
         optimizer_D.step()
 
-    if(epoch%10==0):
+    if(epoch%1==0):
       a = utils.im_convert(gen_imgs)
       plt.imshow(a)
       plt.show()
