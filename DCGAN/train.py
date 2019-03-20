@@ -4,7 +4,7 @@ import utils
 import matplotlib.pyplot as plt
 import torch
 from torch.autograd import Variable
-
+import numpy as np
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #generator object
 gen = Generator().to(device)
