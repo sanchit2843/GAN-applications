@@ -1,4 +1,5 @@
-#!pip install -i https://test.pypi.org/simple/ supportlib
+!pip install wget
+!pip install -i https://test.pypi.org/simple/ supportlib
 import shutil
 import os
 import wget
@@ -10,7 +11,7 @@ wget.download(url)
 
 getdata.tarextract(path_to_tarfile)
 #create a seperate training folder and copy content of all breed folders in single folder
-#!mkdir train
+!mkdir train
 #copy content in single folder
 for i in tqdm(os.listdir(path)):
   path1 = os.path.join(path , i)

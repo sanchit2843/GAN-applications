@@ -1,7 +1,7 @@
-from datacreation import des
+import datacreation
 from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as transforms
-
+from params import *
 #create custom data class with transform
 class dog_dataset(Dataset):
   def __init__(self,image_dir,transform = None):
@@ -18,10 +18,8 @@ class dog_dataset(Dataset):
     if self.transform:
       image = self.transform(image)
     return image
-#Transform with image size = 64
-im_size = 64
 transform = transforms.Compose([transforms.ToPILImage(),
-                                transforms.Resize((64,64)),
+                                transforms.Resize((im_size,im_size)),
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
                     ])
