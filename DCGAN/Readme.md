@@ -7,3 +7,5 @@ Implementation of [DCGAN](https://arxiv.org/abs/1511.06434.pdf) paper using pyto
 4. Specify nrow and ncol in this file 
 5. Run this code it will plot n images generated
 
+# Samples generated:
+![](https://github.com/sanchit2843/GAN-applications/blob/master/DCGAN/results/generated.png)
