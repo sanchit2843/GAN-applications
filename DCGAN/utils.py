@@ -1,4 +1,6 @@
 #initialize weights
+import numpy as np
+import matplotlib.pyplot as plt
 def weights_init(m):
     classname = m.__class__.__name__
     if classname.find('Conv') != -1:
@@ -11,7 +13,6 @@ def weights_init(m):
 def im_convert(tensor):
     image = tensor.to("cpu").clone().detach()
     image = image.numpy().squeeze()
-    image = image[0]
     image = image.transpose(1,2,0)
     image = image * np.array((0.5,0.5,0.5)) + np.array((0.5,0.5,0.5))
     image = image.clip(0, 1)

@@ -2,10 +2,11 @@
 import wget
 from params import *
 from model import Generator
-from utils import view_samples
+from utils import view_samples,im_convert
 import torch
 import argparse
 from torch.autograd import Variable
+import numpy as np
 n = 20
 n_col = 5
 n_row = 4
@@ -17,7 +18,7 @@ gen = Generator().to(device)
 gen.load_state_dict(torch.load('C:/Users/sanch/Downloads/dcgan.h5' , map_location = device))
 
 #define number of images to generate
-print(n)
+Tensor = torch.FloatTensor
 z = Variable(Tensor(np.random.normal(0, 1, (n,100,1,1))))
 gen_imgs = gen(z)
 a = []
