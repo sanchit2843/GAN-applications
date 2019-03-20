@@ -28,3 +28,10 @@ def error_plot(dis_loss, gen_loss):
     plt.legend()
     plt.show()
 #plot random generated images
+def view_samples(samples):
+    fig, axes = plt.subplots(figsize=(7, 7), nrows=5, ncols=4, sharey=True, sharex=True)
+    for ax, img in zip(axes.flatten(), samples):
+        ax.xaxis.set_visible(False)
+        ax.yaxis.set_visible(False)
+        im = ax.imshow(img, cmap='Greys_r')
+    plt.show()
