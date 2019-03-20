@@ -31,7 +31,7 @@ class Discriminator(nn.Module):
         super(Discriminator, self).__init__()
         self.main = nn.Sequential(
 
-            nn.Conv2d(nc,discriminator_filter_size, 4, 2, 1, bias=False),
+            nn.Conv2d(n_channels,discriminator_filter_size, 4, 2, 1, bias=False),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Conv2d(discriminator_filter_size, discriminator_filter_size * 2, 4, 2, 1, bias=False),
             nn.BatchNorm2d(discriminator_filter_size * 2),
