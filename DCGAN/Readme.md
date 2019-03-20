@@ -12,3 +12,5 @@ Implementation of [DCGAN](https://arxiv.org/abs/1511.06434.pdf) paper using pyto
 
 # Training Curve
 ![](https://github.com/sanchit2843/GAN-applications/blob/master/DCGAN/results/Generator_train.png)
+# To do
+Add argument parser for the test step
