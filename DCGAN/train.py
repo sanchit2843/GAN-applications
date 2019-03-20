@@ -33,7 +33,7 @@ for epoch in range(1000):
         optimizer_G.zero_grad()
         z = Variable(Tensor(np.random.normal(0, 1, (imgs.shape[0],100,1,1))))
         gen_imgs = gen(z)
-        b = dis1(gen_imgs)
+        b = dis(gen_imgs)
         g_loss = adversarial_loss(b, valid)
         g_loss.backward()
         optimizer_G.step()
