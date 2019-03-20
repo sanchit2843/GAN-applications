@@ -47,7 +47,8 @@ for epoch in range(1000):
         optimizer_D.step()
 
     if(epoch%1==0):
-      a = utils.im_convert(gen_imgs)
+      a = gen_imgs[0]
+      a = utils.im_convert(a)
       plt.imshow(a)
       plt.show()
     g_losses.append(g_loss.item())
