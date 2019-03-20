@@ -3,7 +3,7 @@ import torchvision.transforms as transforms
 from params import *
 import os
 import cv2
-import datacreation
+#import datacreation
 #create custom data class with transform
 class dog_dataset(Dataset):
   def __init__(self,image_dir,transform = None):
