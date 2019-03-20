@@ -3,15 +3,21 @@ import wget
 from params import *
 from model import Generator
 from utils import view_samples
-wget.download(trained_weights_url)
+import torch
+import argparse
+from torch.autograd import Variable
+n = 20
+n_col = 5
+n_row = 4
+#wget.download(trained_weights_url)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #creating generator object
 gen = Generator().to(device)
-gen.load_state_dict(torch.load('./statedict.h5'))
+gen.load_state_dict(torch.load('C:/Users/sanch/Downloads/dcgan.h5' , map_location = device))
 
 #define number of images to generate
-n = 20
+print(n)
 z = Variable(Tensor(np.random.normal(0, 1, (n,100,1,1))))
 gen_imgs = gen(z)
 a = []
