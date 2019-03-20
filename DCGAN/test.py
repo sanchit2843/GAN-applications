@@ -19,8 +19,8 @@ gen.load_state_dict(torch.load('./dcgan.h5' , map_location = device))
 
 #define number of images to generate
 Tensor = torch.FloatTensor
-if(device =  'cuda'):
-    Tensor = Tensor.cuda()
+if(torch.cuda.is_available()):
+  Tensor = torch.cuda.FloatTensor
 z = Variable(Tensor(np.random.normal(0, 1, (n,100,1,1))))
 gen_imgs = gen(z)
 a = []
