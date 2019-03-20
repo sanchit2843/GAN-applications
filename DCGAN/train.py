@@ -1,4 +1,3 @@
-import datacreation
 from dataloader import dataloader
 from model import Generator,Discriminator
 import utils
@@ -48,3 +47,4 @@ for epoch in range(1000):
     d_losses.append(d_loss.item())
     print ("[Epoch %d/%d] [Batch %d/%d] [D loss: %f] [G loss: %f]" % (epoch, 1000, i, len(dataloader),
                                                             d_loss.item(), g_loss.item()))
+error_plot(d_losses,g_losses)
