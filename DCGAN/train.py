@@ -2,6 +2,7 @@ from dataloader import dataloader
 from model import Generator,Discriminator
 import utils
 import matplotlib.pyplot as plt
+import torch
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #generator object
@@ -16,6 +17,11 @@ Tensor = torch.cuda.FloatTensor if 'cuda' else torch.FloatTensor
 g_losses = []
 d_losses = []
 
+#define loss and optimizers
+adversarial_loss = torch.nn.BCELoss()
+optimizer_G = torch.optim.Adam(gen.parameters(), lr=0.0002, betas=(0.5, 0.999))
+optimizer_D = torch.optim.Adam(dis1.parameters(), lr=0.0002, betas=(0.5, 0.999))
+#train
 for epoch in range(1000):
     for i, imgs in enumerate(dataloader):
 

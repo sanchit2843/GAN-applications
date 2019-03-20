@@ -1,6 +1,7 @@
 #initialize weights
 import numpy as np
 import matplotlib.pyplot as plt
+import torch.nn as nn
 def weights_init(m):
     classname = m.__class__.__name__
     if classname.find('Conv') != -1:
