@@ -27,4 +27,4 @@ transform = transforms.Compose([transforms.ToPILImage(),
                     ])
 #normalize the image with mean (0.5,0.5,0.5) and standard deviation = (0.5,0.5,0.5)
 dog_data = dog_dataset(des ,transform)
-dataloader = DataLoader(dog_data, batch_size=128)
+dataloader = DataLoader(dog_data, batch_size)
