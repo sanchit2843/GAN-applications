@@ -37,7 +37,7 @@ class Discriminator(nn.Module):
             nn.BatchNorm2d(discriminator_filter_size * 2),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Conv2d(discriminator_filter_size* 2, discriminator_filter_size* 4, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
+            nn.BatchNorm2d(discriminator_filter_size* 4),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Conv2d(discriminator_filter_size* 4, discriminator_filter_size* 8, 4, 2, 1, bias=False),
             nn.BatchNorm2d(discriminator_filter_size* 8),
