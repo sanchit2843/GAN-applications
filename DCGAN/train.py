@@ -20,7 +20,7 @@ d_losses = []
 #define loss and optimizers
 adversarial_loss = torch.nn.BCELoss()
 optimizer_G = torch.optim.Adam(gen.parameters(), lr=0.0002, betas=(0.5, 0.999))
-optimizer_D = torch.optim.Adam(dis1.parameters(), lr=0.0002, betas=(0.5, 0.999))
+optimizer_D = torch.optim.Adam(dis.parameters(), lr=0.0002, betas=(0.5, 0.999))
 #train
 for epoch in range(1000):
     for i, imgs in enumerate(dataloader):
