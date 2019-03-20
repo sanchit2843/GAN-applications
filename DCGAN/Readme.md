@@ -1,4 +1,4 @@
-Implementation of [DCGAN](https://arxiv.org/abs/1511.06434.pdf) paper using pytorch framework on dogs dataset to generate dog like images from noise of dimension 64*64.
+Implementation of [DCGAN](https://arxiv.org/abs/1511.06434.pdf) paper using pytorch framework on dogs dataset to generate dog like images from noise of dimension 64*64. The model is trained for 200 epochs. Training for 500-600 epochs will give good result.
 
 # How to use:
 1. Clone github repositories 
