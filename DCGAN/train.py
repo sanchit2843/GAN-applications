@@ -3,6 +3,7 @@ from model import Generator,Discriminator
 import utils
 import matplotlib.pyplot as plt
 import torch
+from torch.autograd import Variable
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #generator object
