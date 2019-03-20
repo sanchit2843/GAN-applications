@@ -10,12 +10,12 @@ import numpy as np
 n = 20
 n_col = 5
 n_row = 4
-#wget.download(trained_weights_url)
+wget.download(trained_weights_url)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #creating generator object
 gen = Generator().to(device)
-gen.load_state_dict(torch.load('C:/Users/sanch/Downloads/dcgan.h5' , map_location = device))
+gen.load_state_dict(torch.load('./dcgan.h5' , map_location = device))
 
 #define number of images to generate
 Tensor = torch.FloatTensor
