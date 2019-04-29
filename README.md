@@ -12,3 +12,4 @@ Replicate several applications of gan
 - [ ] Cycle gan
 - [ ] Stack gan
 - [ ] Style based generator
+- [ ] SRGan(superresolution gan)
