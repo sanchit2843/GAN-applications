@@ -6,6 +6,7 @@ Replicate several applications of gan
 ![](https://github.com/sanchit2843/GAN-applications/blob/master/DCGAN/results/generated.png)
 
 # To do
+Markup : -
 [x] DCGAN
 [] Face aging 
 [] Cycle gan
