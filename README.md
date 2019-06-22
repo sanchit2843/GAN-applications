@@ -8,7 +8,7 @@ Replicate several applications of gan
 # To do
 - [x] DCGAN
 - [ ] Face aging 
-- [ ] Conditional gan (Image to Image translation)
+- [x] Conditional gan (Image to Image translation)
 - [ ] Cycle gan
 - [ ] Stack gan
 - [ ] Style based generator
